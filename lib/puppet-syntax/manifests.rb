@@ -40,6 +40,7 @@ module PuppetSyntax
 
     private
     def validate_manifest(file)
+      Puppet[:parser] = PuppetSyntax.parser_version
       Puppet::Face[:parser, '0.0.1'].validate(file)
     end
   end

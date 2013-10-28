@@ -13,7 +13,6 @@ module PuppetSyntax
       ]
 
       namespace :syntax do
-        Puppet[:parser] = *PuppetSyntax.parser_version
         desc 'Syntax check Puppet manifests'
         task :manifests do |t|
           $stderr.puts "---> #{t.name}"
